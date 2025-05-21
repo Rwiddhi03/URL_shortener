@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp - Mittor</title>
+    <style>
+        /* General body styling */
+        .login-body {
+            font-family: 'Segoe UI', 'Georgia', 'Playfair Display', serif;
+            background-color: #fff7f3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the form */
+        .login-container {
+            background-color: #ffe5d4;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(255, 87, 87, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Title */
+        .login-title {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Section heading */
+        .form-heading {
+            display: block;
+            font-size: 18px;
+            color: #c0392b;
+            margin-bottom: 20px;
+        }
+
+        /* Labels */
+        .form-label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            color: #a23e3e;
+            font-weight: 500;
+        }
+
+        /* Input fields */
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffccbc;
+            border-radius: 8px;
+            background-color: #fff;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: #ff9966;
+            outline: none;
+        }
+
+        /* Submit button */
+        .submit-button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #ff7f50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #e65c35;
+        }
+    </style>
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <h1 class="login-title">SignUp Page for Mittor</h1>
+
+        <form action="/user/signup" method="POST" class="login-form">
+            <label class="form-heading">Enter your Details</label>
+
+            <label class="form-label">Name</label>
+            <input type="text" required name="name" class="form-input">
+
+            <label class="form-label">Email</label>
+            <input type="text" required name="email" class="form-input">
+
+            <label class="form-label">Password</label>
+            <input type="password" required name="password" class="form-input">
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
